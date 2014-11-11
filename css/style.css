@@ -1,0 +1,65 @@
+html, body {
+  padding: 10px;
+  background: #EEE;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0 0 0 20px;
+}
+ul li {
+  padding-bottom: 10px;
+}
+
+h1 {
+  margin: 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #CCC;
+}
+
+h2 {
+  margin: 0;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #999;
+}
+h2 b {
+  color: #C9C;
+}
+
+h3 {
+  margin: 0;
+}
+
+input, textarea, select {
+  outline: none;
+  padding: 5px;
+  border: 1px solid #AAA;
+}
+
+textarea {
+  margin-top: 5px;
+}
+
+.inline {
+  margin: 15px;
+  clear: both;
+}
+.inline label {
+  margin-right: 10px;
+}
+
+.observer-report {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+.observer-report .log {
+  width: 300px;
+  margin: 5px 0;
+  padding: 20px;
+  background: #DDD;
+  color: #666;
+}

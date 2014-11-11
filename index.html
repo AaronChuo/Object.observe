@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>Using Object.observe() to implement two-way data binding - CodePen</title>
+
+  <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+    <script src="js/modernizr.js"></script>
+
+</head>
+
+<body>
+
+  <h1>自己的Data-Binding自己打造！</h1>
+<h2>本實作中使用未來ECMAScript將帶給JavaScript Data-binding革命性的新方法：<b>Object.observe()</b>（目前僅Chrome有支援），Observer為資料綁定提供更簡單、效能更佳的做法。AngularJS 2.0與下一代的EmberJS皆預告將納入Object.observe()來做為Data-binding的核心。</h2>
+<div class="form">
+  <form>
+    <div class="inline">
+      <label for="name">暱稱</label>
+      <input type="text" name="name" id="name" data-bind="name">
+    </div>
+    <div class="inline">
+      <label for="">性別</label>
+      <input type="radio" name="gender" id="male" data-bind="gender" value="男">
+      <label for="male">男</label>
+      <input type="radio" name="gender" id="female" data-bind="gender" value="女">
+      <label for="female">女</label>
+    </div>
+    <div class="inline">
+      <label for="constellation">星座</label>
+      <select name="constellation" id="constellation" data-bind="constellation">
+        <option value="請選擇" disabled selected>請選擇</option>
+        <option value="魔羯">魔羯</option>
+        <option value="水瓶">水瓶</option>
+        <option value="雙魚">雙魚</option>
+        <option value="牡羊">牡羊</option>
+        <option value="金牛">金牛</option>
+        <option value="雙子">雙子</option>
+        <option value="巨蟹">巨蟹</option>
+        <option value="獅子">獅子</option>
+        <option value="處女">處女</option>
+        <option value="天秤">天秤</option>
+        <option value="天蠍">天蠍</option>
+        <option value="射手">射手</option>
+      </select>
+    </div>
+    <div class="inline">
+      <label for="title">職稱</label>
+      <input type="text" name="title" id="title" data-bind="title">
+    </div>
+    <div class="inline">
+      <label>興趣</label>
+      <input type="checkbox" name="interest" id="coding" data-bind="interest" value="寫程式">
+      <label for="coding">寫程式</label>
+      <input type="checkbox" name="interest" id="movie" data-bind="interest" value="看電影">
+      <label for="movie">看電影</label>
+      <input type="checkbox" name="interest" id="travel" data-bind="interest" value="去旅行">
+      <label for="travel">去旅行</label>
+      <input type="checkbox" name="interest" id="eat" data-bind="interest" value="嚐美食">
+      <label for="eat">嚐美食</label>
+      <input type="checkbox" name="interest" id="changeWorld" data-bind="interest" value="改變世界">
+      <label for="changeWorld">改變世界</label>
+    </div>
+    <div class="inline">
+      <div>簡介</div>
+      <textarea name="about" id="about" data-bind="about" cols="20" rows="3"></textarea>
+    </div>
+  </form>
+  <div class="profile inline">
+    <h3>Profile</h3>
+    <ul>
+      <li>暱稱: <span data-bind="name"></span></li>
+      <li>性別: <span data-bind="gender"></span></li>
+      <li>星座: <span data-bind="constellation"></span></li>
+      <li>職稱: <span data-bind="title"></span></li>
+      <li>興趣: <span data-bind="interest"></span></li>
+      <li>簡介: <span data-bind="about"></span></li>
+    </ul>
+  </div>
+</div>
+<div class="observer-report">
+  <div class="inline">
+    <form>
+      <h3>JSON物件</h3>
+      <textarea name="json" class="json" cols="20" rows="6"></textarea>
+    </form>
+  </div>
+  <div class="inline">
+    <h3>Observer Log</h3>
+    <div class="log"></div>
+  </div>
+</div>
+
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
