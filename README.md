@@ -4,7 +4,7 @@ Implement two-way data binding by using Object.observe(), the next JavaScript fe
 
 ### Showcase
 
-[http://codepen.io/aaronchuo/pen/kGaCh](http://codepen.io/aaronchuo/pen/kGaCh) by Aaron Chuo
+- [http://codepen.io/aaronchuo/pen/kGaCh](http://codepen.io/aaronchuo/pen/kGaCh) by Aaron Chuo
 
 ### Referances
 
